@@ -3,75 +3,104 @@
 import { useState, useEffect } from "react";
 
 export default function Header() {
-  const [isLoaded, setIsLoaded] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const toggleNavbar = () => setIsOpen(!isOpen);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
 
   return (
-    <header
+    <nav
       className={`fixed top-0 left-0 w-full z-50 transition-opacity duration-700 ease-in ${
         isLoaded ? "opacity-100" : "opacity-0"
       }`}
     >
-      <nav className="flex flex-col items-end gap-4 md:justify-between h-auto md:h-20 w-full p-2 md:p-12 md:flex-row">
-        {/* Hamburger toggle (mobile only) */}
-        <button
-          onClick={toggleNavbar}
-          className={`
-            block md:hidden cursor-pointer bg-transparent px-[10px]
-            transition-colors duration-300 border-none p-3
-            ${isOpen ? "bg-sky-200" : ""}
-          `}
-          aria-label="Toggle navigation"
-        >
-          {/* Hamburger icon anim*/}
-          <div className="relative w-6 h-4 flex flex-col justify-between">
-            <span
-              className={`block h-0.5 w-full bg-white rounded transition-all duration-300 ${
-                isOpen ? "rotate-45 translate-y-[7px]" : ""
-              }`}
-            ></span>
-            <span
-              className={`block h-0.5 w-full bg-white rounded transition-all duration-300 ${
-                isOpen ? "opacity-0" : ""
-              }`}
-            ></span>
-            <span
-              className={`block h-0.5 w-full bg-white rounded transition-all duration-300 ${
-                isOpen ? "-rotate-45 -translate-y-[7px]" : ""
-              }`}
-            ></span>
-          </div>
-        </button>
+      <div className="flex items-center justify-end p-5">
+        {/* Desktop Nav */}
+        <ul className="hidden md:flex w-full justify-between text-lg md:text-4xl font-semibold px-6 py-3">
+          <li>
+            <a href="#home" className="hover:text-slate-300 transition-colors">
+              &#091; Home &#093;
+            </a>
+          </li>
+          <li>
+            <a href="#about" className="hover:text-slate-300 transition-colors">
+              &#091; About &#093;
+            </a>
+          </li>
+          <li>
+            <a
+              href="#projects"
+              className="hover:text-slate-300 transition-colors"
+            >
+              &#091; Projects &#093;
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              className="hover:text-slate-300 transition-colors"
+            >
+              &#091; Contact &#093;
+            </a>
+          </li>
+        </ul>
 
-        {/* Nav links */}
-        <div
-          className={`
-            flex flex-col md:flex-row items-center w-full justify-between
-            overflow-hidden md:overflow-visible
-            transition-[max-height] duration-500 ease-in-out
-            text-lg md:text-4xl gap-5 font-semibold
-            ${isOpen ? "max-h-60" : "max-h-0"}
-          `}
+        {/* Hamburger button (mobile only) */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden relative z-[60] flex flex-col justify-between w-8 h-6 focus:outline-none"
         >
-          <a href="#home" className="hover:text-slate-300">
-            &#091; Home &#093;
-          </a>
-          <a href="#about" className="hover:text-slate-300">
-            &#091; About &#093;
-          </a>
-          <a href="#projects" className="hover:text-slate-300">
-            &#091; Projects &#093;
-          </a>
-          <a href="#contact" className="hover:text-slate-300">
-            &#091; Contact &#093;
-          </a>
-        </div>
-      </nav>
-    </header>
+          <span
+            className={`block h-[2px] w-full bg-white transition-all duration-300 ${
+              isOpen ? "rotate-45 translate-y-[7px]" : ""
+            }`}
+          />
+          <span
+            className={`block h-[2px] w-full bg-white transition-all duration-300 ${
+              isOpen ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`block h-[2px] w-full bg-white transition-all duration-300 ${
+              isOpen ? "-rotate-45 -translate-y-[7px]" : ""
+            }`}
+          />
+        </button>
+      </div>
+
+      {/* Mobile Fullscreen Overlay Menu */}
+      <div
+        className={`fixed top-0 left-0 w-full h-screen bg-slate-400 flex flex-col items-center justify-center transition-all duration-500 ease-in-out md:hidden ${
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <ul className="space-y-8 text-3xl font-semibold">
+          <li>
+            <a href="#home" onClick={() => setIsOpen(false)}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about" onClick={() => setIsOpen(false)}>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#projects" onClick={() => setIsOpen(false)}>
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onClick={() => setIsOpen(false)}>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 }
