@@ -1,5 +1,10 @@
 import Image from "next/image";
+import Header from "@/components/header";
 
 export default function Portfolio() {
-  return <div></div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
