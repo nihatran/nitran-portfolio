@@ -6,24 +6,24 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50">
+    <nav className="relative top-0 left-0 w-full z-50 h-24">
       <div className="flex items-center justify-end p-5">
         {/* Desktop Nav */}
         <ul className="hidden md:flex w-full justify-between text-lg md:text-4xl font-semibold px-6 py-2">
           <li>
-            <a href="#home" className="hover:text-slate-300 transition-colors">
+            <a href="#home" className="hover:text-slate-400 transition-colors">
               &#091; Home &#093;
             </a>
           </li>
           <li>
-            <a href="#about" className="hover:text-slate-300 transition-colors">
+            <a href="#about" className="hover:text-slate-400 transition-colors">
               &#091; About &#093;
             </a>
           </li>
           <li>
             <a
               href="#projects"
-              className="hover:text-slate-300 transition-colors"
+              className="hover:text-slate-400 transition-colors"
             >
               &#091; Projects &#093;
             </a>
@@ -31,7 +31,7 @@ export default function Header() {
           <li>
             <a
               href="#contact"
-              className="hover:text-slate-300 transition-colors"
+              className="hover:text-slate-400 transition-colors"
             >
               &#091; Contact &#093;
             </a>

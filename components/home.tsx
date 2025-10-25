@@ -55,7 +55,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-svh">
+    <div className="flex justify-center items-center h-[calc(100svh-6rem)]">
       <div className="flex flex-col gap-5 lg:flex-row justify-center items-center h-[80%] w-[80%] lg:w-[50%]">
         <div className="flex flex-col items-center items-center">
           <h1
