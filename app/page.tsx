@@ -1,4 +1,5 @@
-import Image from "next/image";
+"use client";
+
 import Header from "@/components/header";
 import Home from "@/components/home";
 

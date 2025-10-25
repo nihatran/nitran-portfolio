@@ -1,21 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-opacity duration-700 ease-in ${
-        isLoaded ? "opacity-100" : "opacity-0"
-      }`}
-    >
+    <nav className="fixed top-0 left-0 w-full z-50">
       <div className="flex items-center justify-end p-5">
         {/* Desktop Nav */}
         <ul className="hidden md:flex w-full justify-between text-lg md:text-4xl font-semibold px-6 py-2">
