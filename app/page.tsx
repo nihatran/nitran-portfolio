@@ -2,6 +2,7 @@
 
 import Header from "@/components/header";
 import Home from "@/components/home";
+import About from "@/components/about";
 
 export default function Portfolio() {
   return (
@@ -9,6 +10,9 @@ export default function Portfolio() {
       <section id="home">
         <Header />
         <Home />
+      </section>
+      <section id="about">
+        <About />
       </section>
     </div>
   );
