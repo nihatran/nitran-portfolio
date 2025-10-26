@@ -56,7 +56,7 @@ export default function Home() {
 
   return (
     <div className="flex justify-center items-center h-[calc(100svh-6rem)] pb-24">
-      <div className="flex flex-col gap-5 lg:flex-row justify-center items-center h-[80%] w-[80%] lg:w-[50%]">
+      <div className="flex flex-col md:gap-10 gap-5 lg:flex-row justify-center items-center h-[80%] w-[80%] lg:w-[50%]">
         <div className="flex flex-col items-center items-center">
           <h1
             ref={nameRef}
@@ -70,11 +70,12 @@ export default function Home() {
             width={650}
             alt="profile picture sketch"
             loading="eager"
+            layout="responsive"
           />
         </div>
         <div
           ref={titleContainerRef}
-          className="flex flex-col text-[clamp(2rem,5vw,6rem)] gap-1 md:gap-5 w-full font-semibold whitespace-nowrap lg:pt-50"
+          className="flex flex-col text-[clamp(2rem,5vw,6rem)] gap-1 md:gap-5 font-semibold whitespace-nowrap lg:pt-50"
         >
           <h2 className="text-clip-path inline-block overflow-hidden leading-tight">
             /Web Developer
