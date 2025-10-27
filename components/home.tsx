@@ -64,14 +64,16 @@ export default function Home() {
           >
             NI TRAN
           </h1>
-          <Image
-            src="/ni-hero.png"
-            height={800}
-            width={650}
-            alt="profile picture sketch"
-            loading="eager"
-            layout="responsive"
-          />
+          <div className="relative w-full aspect-[13/16]">
+            <Image
+              src="/ni-hero.png"
+              alt="profile picture sketch"
+              fill
+              loading="eager"
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
         </div>
         <div
           ref={titleContainerRef}
