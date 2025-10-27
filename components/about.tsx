@@ -83,13 +83,13 @@ export default function About() {
     <div className="flex xl:flex-col flex-col-reverse justify-end md:justify-between xl:h-svh p-6">
       <div
         ref={aboutSelfRef}
-        className="flex flex-col xl:items-end text-2xl lg:text-4xl xl:text-4xl font-medium xl:font-semibold gap-2 xl:gap-5 px-3 md:px-0"
+        className="flex flex-col xl:items-end text-2xl lg:text-4xl xl:text-4xl font-medium xl:font-semibold gap-2 xl:gap-5 xl:p-5 p-3 md:px-0"
       >
         <p>Take on challenges without fear of failure.</p>
         <p>Live each day to the fullest.</p>
         <p>Keep learning.</p>
       </div>
-      <div className="flex flex-col gap-9 xl:gap-14 md:items-start mb-5 px-3 md:px-0">
+      <div className="flex flex-col gap-9 xl:gap-14 md:items-start mb-5 px-3 xl:p-5 md:px-0">
         <h2 ref={headingRef} className="xl:text-8xl text-5xl font-semibold">
           ABOUT
         </h2>
