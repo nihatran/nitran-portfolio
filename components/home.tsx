@@ -19,7 +19,7 @@ export default function Home() {
     const titles = titleContainerRef.current.querySelectorAll("h2");
     const master = gsap.timeline({ delay: 0.3 });
 
-    const splitName = new SplitText(nameRef.current, {
+    const splitName = SplitText.create(nameRef.current, {
       type: "chars",
     });
 
@@ -34,8 +34,9 @@ export default function Home() {
     });
 
     titles.forEach((title, i) => {
-      const splitTitle = new SplitText(title, {
+      const splitTitle = SplitText.create(title, {
         type: "words",
+        mask: "words",
       });
 
       gsap.set(splitTitle.words, { y: 100 });
@@ -44,7 +45,6 @@ export default function Home() {
         splitTitle.words,
         {
           y: 0,
-          stagger: 0.05,
           duration: 0.9,
           delay: 0.45,
           ease: "power4",
@@ -52,7 +52,7 @@ export default function Home() {
         i * 0.3
       );
     });
-  }, []);
+  });
 
   return (
     <div className="flex justify-center items-center h-[calc(100svh-6rem)] pb-24">
@@ -77,13 +77,13 @@ export default function Home() {
           ref={titleContainerRef}
           className="flex flex-col text-[clamp(2rem,5vw,6rem)] gap-1 md:gap-5 font-semibold whitespace-nowrap lg:pt-50"
         >
-          <h2 className="text-clip-path inline-block overflow-hidden leading-tight">
+          <h2 className="inline-block overflow-hidden leading-tight">
             /Web Developer
           </h2>
-          <h2 className="text-clip-path inline-block overflow-hidden leading-tight">
+          <h2 className="inline-block overflow-hidden leading-tight">
             /Artist
           </h2>
-          <h2 className="text-clip-path inline-block overflow-hidden leading-tight">
+          <h2 className="inline-block overflow-hidden leading-tight">
             /Friend
           </h2>
         </div>
