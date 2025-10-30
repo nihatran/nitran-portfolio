@@ -37,7 +37,7 @@ export default function Projects() {
       <h2 ref={headingRef} className="xl:text-8xl text-5xl font-semibold">
         PROJECTS
       </h2>
-      <div className="flex flex-col xl:flex-row justify-center items-center gap-5 md:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 md:gap-8 justify-items-center">
         <ProjectCard
           imgSrc={"/chiikawapomodoro.png"}
           title={"Chiikawa Pomodoro"}

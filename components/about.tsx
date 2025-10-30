@@ -83,7 +83,7 @@ export default function About() {
     <div className="flex xl:flex-col flex-col-reverse justify-end md:justify-between xl:h-svh p-6">
       <div
         ref={aboutSelfRef}
-        className="flex flex-col xl:items-end text-2xl lg:text-4xl xl:text-4xl font-medium xl:font-semibold gap-1 xl:gap-5 xl:p-5 p-3 md:px-0 mb-5"
+        className="flex flex-col xl:items-end text-2xl lg:text-4xl xl:text-4xl font-medium xl:font-semibold gap-1 xl:gap-5 xl:p-5 p-3 md:px-0 mb-5 text-center xl:text-left"
       >
         <p>Take on challenges without fear of failure.</p>
         <p>Live each day to the fullest.</p>
@@ -96,7 +96,7 @@ export default function About() {
         </h2>
         <div
           ref={aboutMainRef}
-          className="xl:w-[40vw] w-full xl:leading-19 text-2xl lg:text-4xl xl:text-6xl font-medium"
+          className="xl:w-[40vw] md:w-[60vw] w-full xl:leading-19 text-2xl lg:text-4xl xl:text-6xl font-medium text-center xl:text-left"
         >
           <p>Hello! My name is Ni.</p>
           <p>

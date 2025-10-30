@@ -68,7 +68,7 @@ export default function ProjectCard({
         <div className="flex flex-col gap-4 relative group">
           <div
             ref={projectRef}
-            className="relative md:h-[400px] md:w-[400px] h-[300px] w-[300px]"
+            className="relative xl:h-[400px] xl:w-[400px] md:h-[350px] md:w-[350px] h-[300px] w-[300px]"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
