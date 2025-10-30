@@ -6,6 +6,9 @@ import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(SplitText);
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Projects() {
   const headingRef = useRef<HTMLHeadingElement>(null);
 

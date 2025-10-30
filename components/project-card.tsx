@@ -48,7 +48,7 @@ export default function ProjectCard({
       mask: "words",
     });
 
-    gsap.set(splitHeading.words, { y: 100 });
+    gsap.set(splitHeading.words, { yPercent: 100 });
 
     gsap.to(splitHeading.words, {
       scrollTrigger: nameRef.current,
@@ -57,8 +57,8 @@ export default function ProjectCard({
         from: "start",
       },
       duration: 0.9,
-      ease: "power4.out",
-      y: 0,
+      ease: "power4",
+      yPercent: 0,
     });
   });
 
@@ -88,7 +88,11 @@ export default function ProjectCard({
                   ))}
                 </ul>
               </div>
-              <img src="arrow-outward.svg" className="w-10"></img>
+              <img
+                src="arrow-outward.svg"
+                className="w-10"
+                alt="outward arrow"
+              ></img>
             </div>
           </div>
           <h4 ref={nameRef} className="text-2xl font-medium">

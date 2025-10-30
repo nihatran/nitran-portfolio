@@ -4,6 +4,7 @@ import Header from "@/components/header";
 import Home from "@/components/home";
 import About from "@/components/about";
 import Projects from "@/components/projects";
+import Contact from "@/components/contact";
 
 export default function Portfolio() {
   return (
@@ -17,6 +18,9 @@ export default function Portfolio() {
       </section>
       <section id="projects">
         <Projects />
+      </section>
+      <section id="contact">
+        <Contact />
       </section>
     </div>
   );
