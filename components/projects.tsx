@@ -39,7 +39,7 @@ export default function Projects() {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 md:gap-8 justify-items-center">
         <ProjectCard
-          imgSrc={"/chiikawapomodoro.png"}
+          imgSrc={"/chiikawapomodoro.PNG"}
           title={"Chiikawa Pomodoro"}
           tech={["HTML/CSS", "TypeScript", "React"]}
           link={"https://chiikawa-pomodoro.vercel.app/"}
