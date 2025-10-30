@@ -10,40 +10,12 @@ gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
-  const aboutSelfRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const aboutMainRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    if (!aboutSelfRef.current) return;
     if (!headingRef.current) return;
     if (!aboutMainRef.current) return;
-
-    const aboutSelf = aboutSelfRef.current.querySelectorAll("p");
-    const master = gsap.timeline({
-      delay: 0.3,
-      scrollTrigger: { trigger: aboutSelf, start: "top 90%" },
-    });
-
-    aboutSelf.forEach((line, i) => {
-      const splitAboutSelf = SplitText.create(line, {
-        type: "lines",
-        mask: "lines",
-      });
-
-      gsap.set(splitAboutSelf.lines, { yPercent: 100 });
-
-      master.to(
-        splitAboutSelf.lines,
-        {
-          yPercent: 0,
-          duration: 0.9,
-          ease: "power4",
-          stagger: 0.2,
-        },
-        i * 0.3
-      );
-    });
 
     const splitHeading = SplitText.create(headingRef.current, {
       type: "chars",
@@ -80,23 +52,14 @@ export default function About() {
   });
 
   return (
-    <div className="flex xl:flex-col flex-col-reverse justify-end md:justify-between xl:h-svh p-6">
-      <div
-        ref={aboutSelfRef}
-        className="flex flex-col xl:items-end text-2xl lg:text-4xl xl:text-4xl font-medium xl:font-semibold gap-1 xl:gap-5 xl:p-5 p-3 md:px-0 mb-5 text-center xl:text-left"
-      >
-        <p>Take on challenges without fear of failure.</p>
-        <p>Live each day to the fullest.</p>
-        <p>Keep learning.</p>
-      </div>
-      <div className="border-1 md:invisible visible"></div>
-      <div className="flex flex-col gap-9 xl:gap-14 xl:items-start items-center mb-5 px-3 xl:p-5 md:px-0">
+    <div className="flex justify-center items-center xl:h-[80svh] mb-14 xl:mb-0">
+      <div className="flex flex-col gap-9 xl:gap-14 items-center mb-5 px-3 xl:p-5 md:px-0">
         <h2 ref={headingRef} className="xl:text-8xl text-5xl font-semibold">
           ABOUT
         </h2>
         <div
           ref={aboutMainRef}
-          className="xl:w-[40vw] md:w-[60vw] w-full xl:leading-19 text-2xl lg:text-4xl xl:text-6xl font-medium text-center xl:text-left"
+          className="xl:w-[75vw] w-[85vw] xl:leading-26 lg:leading-14 leading-10 tracking-tight text-3xl lg:text-5xl xl:text-7xl font-medium"
         >
           <p>Hello! My name is Ni.</p>
           <p>

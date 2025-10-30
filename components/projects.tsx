@@ -33,7 +33,7 @@ export default function Projects() {
   });
 
   return (
-    <div className="flex flex-col justify-center items-center xl:h-svh gap-9 xl:gap-15">
+    <div className="flex flex-col justify-center items-center xl:h-[80svh] gap-9 xl:gap-15">
       <h2 ref={headingRef} className="xl:text-8xl text-5xl font-semibold">
         PROJECTS
       </h2>
