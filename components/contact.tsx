@@ -58,7 +58,7 @@ export default function Contact() {
     gsap.to(commentRef.current, {
       scrollTrigger: commentRef.current,
       opacity: 1,
-      duration: 0.8,
+      duration: 0.5,
       delay: 0.2,
       ease: "power4.in",
     });
@@ -87,7 +87,7 @@ export default function Contact() {
       opacity: 1,
       duration: 0.9,
       ease: "power4",
-      delay: 0.2,
+      delay: 0.1,
     });
   });
 
