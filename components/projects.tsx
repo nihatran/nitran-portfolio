@@ -37,12 +37,18 @@ export default function Projects() {
       <h2 ref={headingRef} className="xl:text-8xl text-5xl font-semibold">
         PROJECTS
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 md:gap-8 justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-5 md:gap-8 justify-items-center">
         <ProjectCard
-          imgSrc={"/chiikawapomodoro.PNG"}
+          imgSrc={"/chiikawa.PNG"}
           title={"Chiikawa Pomodoro"}
           tech={["HTML/CSS", "TypeScript", "React"]}
           link={"https://chiikawa-pomodoro.vercel.app/"}
+        ></ProjectCard>
+        <ProjectCard
+          imgSrc={"/lamp.PNG"}
+          title={"Lyrics From Lamp"}
+          tech={["HTML", "Tailwind CSS", "TypeScript", "Next.js"]}
+          link={"https://lyrics-from-lamp.vercel.app/"}
         ></ProjectCard>
         <ProjectCard
           imgSrc={"/pokedex.PNG"}
