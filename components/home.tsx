@@ -55,8 +55,8 @@ export default function Home() {
   });
 
   return (
-    <div className="flex justify-center items-center min-h-[calc(100svh-6rem)]">
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-5 md:gap-10 md:mb-25 mb-10">
+    <div className="flex justify-center items-center min-h-[calc(100svh-5rem)]">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-5 md:gap-10 xl:mb-20 mb-5">
         <div className="flex flex-col pb-5">
           <h1
             ref={nameRef}
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
         <div
           ref={titleContainerRef}
-          className="flex flex-col text-[clamp(2rem,4.5vw,6rem)] gap-1 lg:gap-2 xl:gap-5 font-semibold whitespace-nowrap lg:pt-30"
+          className="flex flex-col text-[clamp(2rem,4vw,6rem)] gap-1 lg:gap-2 xl:gap-5 font-semibold whitespace-nowrap lg:pt-30"
         >
           <h2 className="inline-block overflow-hidden leading-tight">
             /Web Developer

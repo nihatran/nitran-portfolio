@@ -6,8 +6,8 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative top-0 left-0 w-full z-50 h-24">
-      <div className="flex items-center justify-end p-5">
+    <nav className="relative top-0 left-0 w-full z-50">
+      <div className="flex items-center justify-end pt-5 px-5">
         {/* Desktop Nav */}
         <ul className="hidden md:flex w-full justify-between text-lg md:text-4xl font-semibold px-6 py-2">
           <li>
