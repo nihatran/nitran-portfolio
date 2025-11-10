@@ -52,14 +52,14 @@ export default function About() {
   });
 
   return (
-    <div className="flex justify-center items-center xl:h-[80svh] mb-14 xl:mb-0 mt-20 xl:mt-0">
-      <div className="flex flex-col gap-9 xl:gap-14 items-center mb-5 px-3 xl:p-5 md:px-0">
+    <div className="flex justify-center items-center mb-14 mt-20">
+      <div className="flex flex-col gap-9 xl:gap-14 items-center md:w-[75vw]">
         <h2 ref={headingRef} className="xl:text-8xl text-5xl font-semibold">
           ABOUT
         </h2>
         <div
           ref={aboutMainRef}
-          className="xl:w-[75vw] w-[85vw] xl:leading-26 lg:leading-14 leading-10 tracking-tight text-3xl lg:text-5xl xl:text-7xl font-medium"
+          className="xl:leading-26 lg:leading-14 leading-10 tracking-tight text-3xl lg:text-4xl xl:text-7xl font-medium px-5"
         >
           <p>Hello! My name is Ni.</p>
           <p>
