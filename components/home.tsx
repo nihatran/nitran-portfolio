@@ -55,29 +55,28 @@ export default function Home() {
   });
 
   return (
-    <div className="flex justify-center items-center h-[calc(100svh-6rem)] pb-24">
-      <div className="flex flex-col md:gap-10 gap-5 lg:flex-row justify-center items-center h-[80%] w-[80%] lg:w-[50%]">
-        <div className="flex flex-col items-center items-center">
+    <div className="flex justify-center items-center min-h-[calc(100svh-6rem)]">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-5 md:gap-10 md:mb-25 mb-10">
+        <div className="flex flex-col pb-5">
           <h1
             ref={nameRef}
-            className="whitespace-nowrap text-[clamp(4.5rem,10vw,11rem)] lg:mb-[-5rem] mb-[-35] z-10 font-semibold text-slate-400"
+            className="whitespace-nowrap text-[clamp(4rem,7vw,11rem)] md:mb-[-3.3vw] mb-[-8vw] z-10 font-semibold text-slate-400"
           >
             NI TRAN
           </h1>
-          <div className="relative w-full aspect-[13/16]">
+          <div className="relative w-full aspect-[13/16] max-h-[70vh]">
             <Image
               src="/ni-hero.png"
               alt="profile picture sketch"
               fill
               loading="eager"
               className="object-contain"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         </div>
         <div
           ref={titleContainerRef}
-          className="flex flex-col text-[clamp(2rem,5vw,6rem)] gap-1 md:gap-5 font-semibold whitespace-nowrap lg:pt-50"
+          className="flex flex-col text-[clamp(2rem,4.5vw,6rem)] gap-1 lg:gap-2 xl:gap-5 font-semibold whitespace-nowrap lg:pt-30"
         >
           <h2 className="inline-block overflow-hidden leading-tight">
             /Web Developer
