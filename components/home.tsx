@@ -85,7 +85,7 @@ export default function Home() {
             /Artist
           </h2>
           <h2 className="inline-block overflow-hidden leading-tight">
-            /Friend
+            /Thinker
           </h2>
         </div>
       </div>
