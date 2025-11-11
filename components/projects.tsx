@@ -33,11 +33,14 @@ export default function Projects() {
   });
 
   return (
-    <div className="flex flex-col justify-center items-center xl:h-[90svh] gap-9 xl:gap-15">
-      <h2 ref={headingRef} className="xl:text-8xl text-5xl font-semibold">
+    <div className="flex flex-col justify-center items-center gap-9 xl:gap-15 xl:pt-50">
+      <h2
+        ref={headingRef}
+        className="text-[clamp(3rem,5vw,8rem)] font-semibold"
+      >
         PROJECTS
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-5 md:gap-8 justify-items-center">
+      <div className="flex flex-wrap justify-center gap-5 md:gap-10 px-5 xl:w-[75vw]">
         <ProjectCard
           imgSrc={"/chiikawa.PNG"}
           title={"Chiikawa Pomodoro"}
@@ -67,6 +70,12 @@ export default function Projects() {
           title={"Stock Analyzer"}
           tech={["C#", "Windows Forms"]}
           link={"https://github.com/nihatran/Stock-Analyzer"}
+        ></ProjectCard>
+        <ProjectCard
+          imgSrc={"/pikachu-robot.png"}
+          title={"Pikachu Robot"}
+          tech={["Arduino"]}
+          link={"https://github.com/nihatran/Pikachu-Robot"}
         ></ProjectCard>
       </div>
     </div>
