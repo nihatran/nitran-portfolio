@@ -92,17 +92,20 @@ export default function Contact() {
   });
 
   return (
-    <div className="flex flex-col xl:h-[80svh] h-[25svh] gap-9 mt-20 xl:mt-0">
+    <div className="flex flex-col xl:h-[80svh] gap-9 mt-20 xl:mt-0">
       <div className="flex flex-col justify-center items-center h-[100%] gap-4">
-        <h2 ref={headingRef} className="xl:text-8xl text-5xl font-semibold">
+        <h2
+          ref={headingRef}
+          className="text-[clamp(3rem,5vw,8rem)] font-semibold"
+        >
           CONTACT
         </h2>
         <p ref={commentRef} className="text-2xl xl:text-3xl font-semibold">
           &#091; Let's Chat! &#093;
         </p>
       </div>
-      <div className="flex w-full justify-center xl:justify-end items-center px-11 gap-4 ">
-        <div className="flex flex-col gap-7 text-xl md:text-2xl xl:text-5xl font-semibold">
+      <div className="flex w-full justify-center xl:justify-end items-center px-11 gap-4">
+        <div className="flex flex-col gap-7 text-xl md:text-2xl xl:text-4xl font-semibold">
           <Tooltip anchorSelect="#email">{copied ? "Copied!" : "Copy"}</Tooltip>
           <button
             onClick={handleCopy}

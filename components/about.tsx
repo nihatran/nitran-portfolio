@@ -53,7 +53,7 @@ export default function About() {
 
   return (
     <div className="flex justify-center items-center mb-14 mt-20">
-      <div className="flex flex-col gap-9 xl:gap-14 items-center md:w-[75vw]">
+      <div className="flex flex-col gap-9 items-center md:w-[75vw]">
         <h2
           ref={headingRef}
           className="text-[clamp(3rem,5vw,8rem)] font-semibold"
@@ -62,7 +62,7 @@ export default function About() {
         </h2>
         <div
           ref={aboutMainRef}
-          className="xl:leading-28 lg:leading-14 leading-12 tracking-tight text-[clamp(2rem,3.5vw,6rem)] font-medium px-5"
+          className="tracking-tight text-[clamp(2rem,3.5vw,6rem)] font-medium px-5"
         >
           <p>Hello! My name is Ni.</p>
           <p>

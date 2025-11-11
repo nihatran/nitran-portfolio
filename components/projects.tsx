@@ -33,7 +33,7 @@ export default function Projects() {
   });
 
   return (
-    <div className="flex flex-col justify-center items-center gap-9 xl:gap-15 xl:pt-50">
+    <div className="flex flex-col justify-center items-center gap-9 xl:gap-15 xl:pt-30">
       <h2
         ref={headingRef}
         className="text-[clamp(3rem,5vw,8rem)] font-semibold"
